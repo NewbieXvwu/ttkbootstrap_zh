@@ -1,42 +1,29 @@
-# 浅色主题
+# Light themes
 
-以下浅色主题很大程度上受到 [https://bootswatch.com/](https://bootswatch.com/) 的启发
+The following light themes are largly inspired by [https://bootswatch.com/](https://bootswatch.com/)
 
-![cosmo 主题](../assets/themes/cosmo.png)
-[灵感来源](https://bootswatch.com/cosmo/)
+![cosmo theme](../assets/themes/cosmo.png) Source of [inspiration](https://bootswatch.com/cosmo/)
 
-![flatly 主题](../assets/themes/flatly.png)
-[灵感来源](https://bootswatch.com/flatly/)
+![flatly theme](../assets/themes/flatly.png) Source of [inspiration](https://bootswatch.com/flatly/)
 
-![journal 主题](../assets/themes/journal.png)
-[灵感来源](https://bootswatch.com/journal/)
+![journal theme](../assets/themes/journal.png) Source of [inspiration](https://bootswatch.com/journal/)
 
-![litera 主题](../assets/themes/litera.png)
-[灵感来源](https://bootswatch.com/litera/)
+![litera theme](../assets/themes/litera.png) Source of [inspiration](https://bootswatch.com/litera/)
 
-![lumen 主题](../assets/themes/lumen.png)
-[灵感来源](https://bootswatch.com/lumen/)
+![lumen theme](../assets/themes/lumen.png) Source of [inspiration](https://bootswatch.com/lumen/)
 
-![minty 主题](../assets/themes/minty.png)
-[灵感来源](https://bootswatch.com/minty/)
+![minty theme](../assets/themes/minty.png) Source of [inspiration](https://bootswatch.com/minty/)
 
-![pulse 主题](../assets/themes/pulse.png)
-[灵感来源](https://bootswatch.com/pulse/)
+![pulse theme](../assets/themes/pulse.png) Source of [inspiration](https://bootswatch.com/pulse/)
 
-![sandstone 主题](../assets/themes/sandstone.png)
-[灵感来源](https://bootswatch.com/sandstone/)
+![sandstone theme](../assets/themes/sandstone.png) Source of [inspiration](https://bootswatch.com/sandstone/)
 
-![united 主题](../assets/themes/united.png)
-[灵感来源](https://bootswatch.com/united/)
+![united theme](../assets/themes/united.png) Source of [inspiration](https://bootswatch.com/united/)
 
-![yeti 主题](../assets/themes/yeti.png)
-[灵感来源](https://bootswatch.com/yeti/)
+![yeti theme](../assets/themes/yeti.png) Source of [inspiration](https://bootswatch.com/yeti/)
 
-![morph 主题](../assets/themes/morph.png)
-[灵感来源](https://bootswatch.com/morph/)
+![morph theme](../assets/themes/morph.png) Source of [inspiration](https://bootswatch.com/morph/)
 
-![simplex 主题](../assets/themes/simplex.png)
-[灵感来源](https://bootswatch.com/simplex/)
+![simplex theme](../assets/themes/simplex.png) Source of [inspiration](https://bootswatch.com/simplex/)
 
-![cerculean 主题](../assets/themes/cerculean.png)
-[灵感来源](https://bootswatch.com/cerulean/)
+![cerculean theme](../assets/themes/cerculean.png) Source of [inspiration](https://bootswatch.com/cerulean/)
