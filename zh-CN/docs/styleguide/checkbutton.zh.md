@@ -1,91 +1,89 @@
-# 检查按钮
+# Checkbutton
 
-此小部件具有多种检查按钮样式类型，默认为 **primary** 颜色或 [选定颜色](index.md#colors)。
+This widget features a variety of checkbutton style types that are **primary** colored by default or the [selected color](index.md#colors).
 
-这个小部件支持一种特殊的样式
-[禁用状态](#other-checkbutton-styles)。
+This widget supports a special style for [disabled state](#other-checkbutton-styles).
 
-## 复选按钮（默认）
+## Checkbutton (default)
 
-默认样式具有方形复选框和标签。该复选框在未选中时具有柔和的颜色轮廓，在选中时具有带复选标记的实心正方形。
+The default style features a square checkbox and label. The checkbox has a muted color outline when not selected, and a filled square with checkmark when selected.
 
 ![checkbutton](../assets/widget-styles/checkbuttons.png)
 
 ```python
-# 默认检查按钮样式
+# default checkbutton style
 Checkbutton()
 
-# success检查按钮样式
+# success checkbutton style
 Checkbutton(bootstyle="success")
 ```
 
-## 工具按钮
+## Toolbutton
 
-这种风格有一个实心矩形按钮，可以在 _关闭_ 和 _启用_ 颜色之间切换。 _关闭_ 时背景为柔和的灰色，_启用_ 或 _激活_ 时为默认或 [选定颜色](index.md#colors)。
+This style features a solid rectangular button that toggles between an _off_ and _on_ color. The background is a muted gray when _off_ and a default or [selected color](index.md#colors) when _on_ or _active_.
 
 ![solid toolbuttons](../assets/widget-styles/solid-toolbuttons.gif)
 
 ```python
-# 默认工具按钮样式
+# default toolbutton style
 Checkbutton(bootstyle="toolbutton")
 
-# 成功工具按钮样式
+# success toolbutton style
 Checkbutton(bootstyle="success-toolbutton")
 ```
 
-## 外框工具按钮
+## Outline toolbutton
 
-此样式具有一个矩形按钮，可在样式之间切换
- _关闭_ 时为**outline**，_启用_ 或 _激活_ 时为**solid**背景。
+This style features a rectangular button that toggles between a styled **outline** when _off_ and a **solid** background when _on_ or _active_.
 
-![外框工具按钮](../assets/widget-styles/outline-toolbuttons.gif)
+![outline toolbuttons](../assets/widget-styles/outline-toolbuttons.gif)
 
 ```python
-# 默认外框工具按钮样式
+# default outline toolbutton style
 Checkbutton(bootstyle="outline-toolbutton")
 
-# success外框工具按钮样式
+# success outline toolbutton style
 Checkbutton(bootstyle="success-outline-toolbutton")
 ```
 
-## 圆形切换按钮
+## Round toggle button
 
-这种风格的特点是带有**圆形**指示器的圆形按钮，当切换 _关闭_ 和 _启用_ 时会改变颜色和位置。 _关闭_ 时，该按钮是一个带有静音颜色指示器的静音轮廓。 _启用_ 时，该按钮将填充默认或 [选定颜色](index.md#colors) 并带有重音指示符。
+This style features a rounded button with a **round** indicator that changes color and position when toggled _off_ and _on_. The button is a muted outline with a muted color indicator when _off_. The button is filled with the default or [selected color](index.md#colors) with an accented indicator when _on_.
 
-![圆形切换](../assets/widget-styles/round-toggles.gif)
+![round toggles](../assets/widget-styles/round-toggles.gif)
 
 ```python
-# 默认圆形切换样式
+# default round toggle style
 Checkbutton(bootstyle="round-toggle")
 
-# success圆形切换样式
+# success round toggle style
 Checkbutton(bootstyle="success-round-toggle")
 ```
 
-## 方形切换按钮
+## Square toggle button
 
-这种风格的特点是带有**square** 指示器的方形按钮，当切换 _关闭_ 和 _启用_ 时会改变颜色和位置。 _关闭_ 时，该按钮是一个带有关闭颜色指示器的关闭轮廓； _启用_ 时，该按钮将填充默认或 [选定颜色](index.md#colors) 并带有启用指示符。
+This style features a squared button with a **square** indicator that changes color and position when toggled _off_ and _on_. The button is a muted outline with a muted color indicator when _off_. The button is filled with the default or [selected color](index.md#colors) with an accented indicator when _on_.
 
-![方形切换](../assets/widget-styles/square-toggles.gif)
+![square toggles](../assets/widget-styles/square-toggles.gif)
 
 ```python
-# 默认方形切换样式
+# default square toggle style
 Checkbutton(bootstyle="square-toggle")
 
-# success方形切换样式
+# success square toggle style
 Checkbutton(bootstyle="success-square-toggle")
 ```
 
-## 其他检查按钮样式
+## Other checkbutton styles
 
-#### 禁用复选按钮
-这种风格 _不能通过关键字应用_；它是通过小部件设置进行配置的。
+#### Disabled checkbutton
+This style _cannot be applied via keywords_; it is configured through widget settings.
 
 ```python
-# 创建处于禁用状态的复选按钮
+# create the checkbutton in a disabled state
 Checkbutton(state="disabled")
 
-# 创建后禁用复选按钮
+# disable a checkbutton after creation
 cb = Checkbutton()
 cb.configure(state="disabled")
 ```
