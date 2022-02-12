@@ -1,6 +1,7 @@
 # Sizegrip
 
-This widget style features a pattern of squares in a default muted color by default, or the [selected color](index.md#colors).
+This widget style features a pattern of squares in a default muted color
+by default, or the [selected color](index.md#colors).
 
 ![sizegrip](../assets/widget-styles/sizegrip.gif)
 
