@@ -1,21 +1,21 @@
-# File Search Engine
-This application is a local file search engine that uses threading and a queue to manage IO tasks in order to keep the gui interactive. The `Treeview` updates the results in real-time and sets the focus and view on the most recently inserted result in the results `Treeview`.
+# 文件搜索引擎
+这个应用程序是一个本地文件搜索引擎，它使用线程和队列来管理 IO 任务，以保持 gui 交互。 `Treeview` 实时更新结果，并将焦点和视图设置在结果 `Treeview` 中最近插入的结果上。
 
-![file search image example](../assets/gallery/file_search_engine.png)
+![文件搜索图像示例](../assets/gallery/file_search_engine.png)
 
-## Style Summary
-The theme used in this example is **journal**.
+## 风格总结
+此示例中使用的主题是 **journal**。
 
-| Item        | Class         | Bootstyle       |
-| ----------- | ------------- | --------------- |
-| User Input  | `Entry`       | default         |
-| Browse      | `Button`      | primary         |
-| Search      | `Button`      | primary-outline |
-| Treeview    | `Treeview`    | info            |
-| Progressbar | `Progressbar` | success         |
+| 项目          | 类         | 配色风格         |
+| ---           | ---           | ---               |
+| 用户输入    | `Entry`       | default           |
+| 选择        | `Button`      | primary           |
+| 搜索        | `Button`      | primary-outline   |
+| 树视图      | `Treeview`    | info              |
+| 进度条   | `Progressbar` | success           |
 
-## Example Code
-[Run this code live](https://replit.com/@israel-dryer/file-search-engine#main.py) on repl.it
+## 示例代码
+[在 repl.it 上实时运行此代码](https://replit.com/@israel-dryer/file-search-engine#main.py)
 
 ```python
 import datetime
@@ -36,7 +36,7 @@ class FileSearchEngine(ttk.Frame):
     def __init__(self, master):
         super().__init__(master, padding=15)
         self.pack(fill=BOTH, expand=YES)
-
+        
         # application variables
         _path = pathlib.Path().absolute().as_posix()
         self.path_var = ttk.StringVar(value=_path)
@@ -107,7 +107,7 @@ class FileSearchEngine(ttk.Frame):
             value="contains"
         )
         contains_opt.pack(side=LEFT)
-
+        
         startswith_opt = ttk.Radiobutton(
             master=type_row, 
             text="StartsWith", 
@@ -115,7 +115,7 @@ class FileSearchEngine(ttk.Frame):
             value="startswith"
         )
         startswith_opt.pack(side=LEFT, padx=15)
-
+        
         endswith_opt = ttk.Radiobutton(
             master=type_row, 
             text="EndsWith", 
@@ -182,10 +182,10 @@ class FileSearchEngine(ttk.Frame):
         search_term = self.term_var.get()
         search_path = self.path_var.get()
         search_type = self.type_var.get()
-
+        
         if search_term == '':
             return
-
+        
         # start search in another thread to prevent UI from locking
         Thread(
             target=FileSearchEngine.file_search, 
@@ -193,7 +193,7 @@ class FileSearchEngine(ttk.Frame):
             daemon=True
         ).start()
         self.progressbar.start(10)
-
+        
         iid = self.resultview.insert(
             parent='', 
             index=END, 
@@ -309,7 +309,7 @@ class FileSearchEngine(ttk.Frame):
 
 
 if __name__ == '__main__':
-
+  
     app = ttk.Window("File Search Engine", "journal")
     FileSearchEngine(app)
     app.mainloop()

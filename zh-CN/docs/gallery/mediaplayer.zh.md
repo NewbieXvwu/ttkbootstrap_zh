@@ -1,21 +1,21 @@
-# Media Player
-This example demonstrates how to build a media player GUI. The buttons are simple unicode characters.
+# 媒体播放器
+此示例演示如何构建媒体播放器 GUI。 这些按钮是简单的 Unicode 字符。
 
-![file search image example](../assets/gallery/media_player.png)
+![文件搜索图像示例](../assets/gallery/media_player.png)
 
-## Style Summary
-The theme used in this example is **yeti**.
+## 风格总结
+此示例中使用的主题是 **yeti**。
 
-| Item                | Class    | Bootstyle     |
-| ------------------- | -------- | ------------- |
-| Header              | `Label`  | light-inverse |
-| Media Controls      | `Button` | primary       |
-| File Open           | `Button` | secondary     |
-| Time Elapsed Slider | `Scale`  | secondary     |
+| 项目                  | 类     | 配色样式 |
+| ---                   | ---       | --- |
+| 顶部栏                | `Label`   | light-inverse |
+| 媒体控制        | `Button`  | primary |
+| 打开文件             | `Button`  | secondary |
+| 时间滑块   | `Scale`   | secondary |
 
 
-## Example Code
-[Run this code live](https://replit.com/@israel-dryer/media-player#main.py) on repl.it
+## 示例代码
+[在 repl.it 上实时运行此代码](https://replit.com/@israel-dryer/media-player#main.py)
 
 ```python
 from pathlib import Path
@@ -32,12 +32,12 @@ class MediaPlayer(ttk.Frame):
         self.hdr_var = ttk.StringVar()
         self.elapsed_var = ttk.DoubleVar(value=0)
         self.remain_var = ttk.DoubleVar(value=190)
-
+        
         self.create_header()
         self.create_media_window()
         self.create_progress_meter()
         self.create_buttonbox()
-
+    
     def create_header(self):
         """The application header to display user messages"""
         self.hdr_var.set("Open a file to begin playback")
@@ -60,7 +60,7 @@ class MediaPlayer(ttk.Frame):
         """Create frame with progress meter with lables"""
         container = ttk.Frame(self)
         container.pack(fill=X, expand=YES, pady=10)
-
+        
         self.elapse = ttk.Label(container, text='00:00')
         self.elapse.pack(side=LEFT, padx=10)
 
@@ -129,11 +129,11 @@ class MediaPlayer(ttk.Frame):
         elapsed = self.elapsed_var.get()
         remaining = self.remain_var.get()
         total = int(elapsed + remaining)
-
+        
         elapse = int(float(val) * total)
         elapse_min = elapse // 60
         elapse_sec = elapse % 60
-
+        
         remain_tot = total - elapse
         remain_min = remain_tot // 60
         remain_sec = remain_tot % 60
@@ -143,7 +143,7 @@ class MediaPlayer(ttk.Frame):
 
         self.elapse.configure(text=f'{elapse_min:02d}:{elapse_sec:02d}')
         self.remain.configure(text=f'{remain_min:02d}:{remain_sec:02d}')
-
+        
 
 if __name__ == '__main__':
 

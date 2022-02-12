@@ -1,22 +1,22 @@
-# File Backup Utility
-This example demonstrates how to use various styles to build a UI for a File Backup Utility application. A custom `CollapsingFrame` class contains the left-side info panels as well as the output on the bottom right. These contain indicator buttons on the right-side of the header which collapse and expand the `Frame` with a mouse-click action.
+# 文件备份实用程序
+此示例演示如何使用各种样式为文件备份实用程序应用程序构建 UI。自定义的 `CollapsingFrame` 类包含左侧信息面板以及右下角的输出。这些包含标题右侧的指示器按钮，可通过鼠标单击操作折叠和展开“框架”。
 
-![file search image example](../assets/gallery/back_me_up.png)
+![文件搜索图像示例](../assets/gallery/back_me_up.png)
 
-## Style Summary
-The theme used in this example is **litera**.
+## 风格总结
+此示例中使用的主题是 **litera**。
 
-| Item                            | Class             | Bootstyle      |
-| ------------------------------- | ----------------- | -------------- |
-| Top button bar                  | `Button`          | primary        |
-| Collapsible frames              | `CollapsingFrame` | secondary      |
-| Separators                      | `Separator`       | secondary      |
-| Progressbar                     | `Progressbar`     | success        |
-| Properties, stop, add to backup | `Button`          | link           |
-| File Open                       | `Button`          | secondary-link |
+|项目 |类 |配色风格 |
+| --- | --- | ---|
+|顶部按钮栏 | `Button` |primary |
+|可折叠框架 | `CollapsingFrame` |secondary |
+|分隔符 | `Separator` |secondary |
+|进度条 | `Progressbar` |success|
+|属性、停止、添加到备份 | `Button` |link |
+|打开文件 | `Button` |secondary-link |
 
-## Example Code
-[Run this code live](https://replit.com/@israel-dryer/file-backup-utility#main.py) on repl.it
+## 示例代码
+[在 repl.it 上实时运行此代码](https://replit.com/@israel-dryer/file-backup-utility#main.py)
 
 ```python
 from datetime import datetime
@@ -264,10 +264,10 @@ class BackMeUp(ttk.Frame):
         ## file input
         browse_frm = ttk.Frame(right_panel)
         browse_frm.pack(side=TOP, fill=X, padx=2, pady=1)
-
+        
         file_entry = ttk.Entry(browse_frm, textvariable='folder-path')
         file_entry.pack(side=LEFT, fill=X, expand=YES)
-
+        
         btn = ttk.Button(
             master=browse_frm, 
             image='opened-folder', 
@@ -283,19 +283,19 @@ class BackMeUp(ttk.Frame):
             'last-run-time', 'size'
         ))
         tv.column('name', width=150, stretch=True)
-
+        
         for col in ['last-modified', 'last-run-time', 'size']:
             tv.column(col, stretch=False)
-
+        
         for col in tv['columns']:
             tv.heading(col, text=col.title(), anchor=W)
-
+        
         tv.pack(fill=X, pady=1)
 
         ## scrolling text output
         scroll_cf = CollapsingFrame(right_panel)
         scroll_cf.pack(fill=BOTH, expand=YES)
-
+        
         output_container = ttk.Frame(scroll_cf, padding=1)
         _value = 'Log: Backing up... [Uploading file: D:/sample_file_35.txt]'
         self.setvar('scroll-message', _value)
@@ -362,7 +362,7 @@ class CollapsingFrame(ttk.Frame):
         """
         if child.winfo_class() != 'TFrame':
             return
-
+        
         style_color = Bootstyle.ttkstyle_widget_color(bootstyle)
         frm = ttk.Frame(self, bootstyle=style_color)
         frm.grid(row=self.cumulative_rows, column=0, sticky=EW)
@@ -399,7 +399,7 @@ class CollapsingFrame(ttk.Frame):
         image accordingly.
 
         Parameters:
-
+            
             child (Frame):
                 The child element to add or remove from grid manager.
         """
@@ -412,7 +412,7 @@ class CollapsingFrame(ttk.Frame):
 
 
 if __name__ == '__main__':
-
+    
     app = ttk.Window("Back Me Up")
     BackMeUp(app)
     app.mainloop()
