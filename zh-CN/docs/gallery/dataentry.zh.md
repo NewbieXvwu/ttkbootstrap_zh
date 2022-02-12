@@ -8,14 +8,14 @@
 ## 风格总结
 上面的两个示例使用了 **litera** 和 **superhero** 主题。
 
-| 项目   | 类        | 配色风格    |
-| ---- | -------- | ------- |
-| 提交按钮 | `Button` | success |
-| 取消按钮 | `Button` | danger  |
-| 输入   | `Entry`  | default |
+| 项目 | 类 | 配色风格 |
+| --- | --- | ---|
+| 提交按钮 | `Button` | success|
+| 取消按钮 | `Button` | danger |
+| 输入 | `Entry` | default |
 
 ## 示例代码
-https://replit.com/@israel-dryer/data-entry#main.py
+[在 repl.it 上实时运行此代码](https://replit.com/@israel-dryer/data-entry#main.py)
 
 ```python
 import ttkbootstrap as ttk
@@ -23,7 +23,7 @@ from ttkbootstrap.constants import *
 
 
 class DataEntryForm(ttk.Frame):
-
+    
     def __init__(self, master):
         super().__init__(master, padding=(20, 10))
         self.pack(fill=BOTH, expand=YES)
@@ -81,21 +81,6 @@ class DataEntryForm(ttk.Frame):
 
     def on_submit(self):
         """Print the contents to console and return the values."""
-        print("Name:", self.name.get())
-        print("Address:", self.address.get())
-        print("Phone:", self.phone.get())
-        return self.name.get(), self.address.get(), self.phone.get()
-
-    def on_cancel(self):
-        """Cancel and close the application."""
-        self.quit()
-
-
-if __name__ == "__main__":
-
-    app = ttk.Window("Data Entry", "superhero", resizable=(False, False))
-    DataEntryForm(app)
-    app.mainloop()
         print("Name:", self.name.get())
         print("Address:", self.address.get())
         print("Phone:", self.phone.get())

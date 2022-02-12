@@ -6,14 +6,14 @@
 ## 风格总结
 此示例中使用的主题是 **flatly**。
 
-| 项目  | 类    | 配色风格      |
-| --- | ---- | --------- |
-| 数字  | `按钮` | primary   |
-| 运算符 | `按钮` | secondary |
-| 等于  | `按钮` | success   |
+|项目 |类 |配色风格 |
+| --- | --- |--- |
+|数字 | `按钮` |primary |
+|运算符 | `按钮` |secondary |
+|等于 | `按钮` |success|
 
 ## 示例代码
-https://replit.com/@israel-dryer/calculator#main.py
+[在 repl.it 上实时运行此代码](https://replit.com/@israel-dryer/calculator#main.py)
 
 ```python
 import ttkbootstrap as ttk
@@ -88,79 +88,6 @@ class Calculator(ttk.Frame):
 
     def on_button_pressed(self, txt):
         """Handles and routes all button press events."""
-        display = self.digitsvar.get()
-
-        # remove operator from screen after button is pressed
-        if len(display) > 0:
-            if display[0] in ["/", "*", "-", "+"]:
-                display = display[1:]
-
-        if txt in ["CE", "C"]:
-            self.digitsvar.set("")
-            self.reset_variables()
-        elif isinstance(txt, int):
-            self.press_number(display, txt)
-        elif txt == "." and "." not in display:
-            self.digitsvar.set(f"{display}{txt}")
-        elif txt == "±":
-            self.press_inverse(display)
-        elif txt in ["/", "*", "-", "+"]:
-            self.press_operator(txt)
-        elif txt == "=":
-            self.press_equals(display)
-
-    def press_number(self, display, txt):
-        """A digit button is pressed"""
-        if display == "0":
-            self.digitsvar.set(txt)
-        else:
-            self.digitsvar.set(f"{display}{txt}")
-
-    def press_inverse(self, display):
-        """The inverse number button is pressed"""
-        if display.startswith("-"):
-            if len(display) > 1:
-                self.digitsvar.set(display[1:])
-            else:
-                self.digitsvar.set("")
-        else:
-            self.digitsvar.set(f"-{display}")
-
-    def press_operator(self, txt):
-        """An operator button is pressed"""
-        self.operator.set(txt)
-        display = float(self.digitsvar.get())
-        if self.xnum.get() != 0:
-            self.ynum.set(display)
-        else:
-            self.xnum.set(display)
-        self.digitsvar.set(txt)
-
-    def press_equals(self, display):
-        """The equals button is pressed."""
-        if self.xnum.get() != 0:
-            self.ynum.set(display)
-        else:
-            self.xnum.set(display)
-        x = self.xnum.get()
-        y = self.ynum.get()
-        op = self.operator.get()
-        if all([x, y, op]):
-            result = eval(f"{x}{op}{y}")
-            self.digitsvar.set(result)
-            self.reset_variables()
-
-
-if __name__ == "__main__":
-
-    app = ttk.Window(
-        title="Calculator",
-        themename="flatly",
-        size=(350, 450),
-        resizable=(False, False),
-    )
-    Calculator(app)
-    app.mainloop()
         display = self.digitsvar.get()
 
         # remove operator from screen after button is pressed

@@ -2,11 +2,12 @@
 
 此小部件具有多种检查按钮样式类型，默认为 **primary** 颜色或 [选定颜色](index.md#colors)。
 
-这个小部件支持一种特殊的样式 [禁用状态](#other-checkbutton-styles)。
+这个小部件支持一种特殊的样式
+[禁用状态](#other-checkbutton-styles)。
 
 ## 复选按钮（默认）
 
-默认样式具有方形复选框和标签。 该复选框在未选中时具有柔和的颜色轮廓，在选中时具有带复选标记的实心正方形。
+默认样式具有方形复选框和标签。该复选框在未选中时具有柔和的颜色轮廓，在选中时具有带复选标记的实心正方形。
 
 ![checkbutton](../assets/widget-styles/checkbuttons.png)
 
@@ -34,7 +35,8 @@ Checkbutton(bootstyle="success-toolbutton")
 
 ## 外框工具按钮
 
-此样式具有一个矩形按钮，可在样式之间切换 _关闭_ 时为**outline**，_启用_ 或 _激活_ 时为**solid**背景。
+此样式具有一个矩形按钮，可在样式之间切换
+ _关闭_ 时为**outline**，_启用_ 或 _激活_ 时为**solid**背景。
 
 ![外框工具按钮](../assets/widget-styles/outline-toolbuttons.gif)
 
@@ -62,7 +64,7 @@ Checkbutton(bootstyle="success-round-toggle")
 
 ## 方形切换按钮
 
-这种风格的特点是带有**square** 指示器的方形按钮，当切换 _关闭_ 和 _启用_ 时会改变颜色和位置。 The button is a muted outline with a muted color indicator when _off_. _关闭_ 时，该按钮是一个带有关闭颜色指示器的关闭轮廓； _启用_ 时，该按钮将填充默认或 [选定颜色](index.md#colors) 并带有启用指示符。
+这种风格的特点是带有**square** 指示器的方形按钮，当切换 _关闭_ 和 _启用_ 时会改变颜色和位置。 _关闭_ 时，该按钮是一个带有关闭颜色指示器的关闭轮廓； _启用_ 时，该按钮将填充默认或 [选定颜色](index.md#colors) 并带有启用指示符。
 
 ![方形切换](../assets/widget-styles/square-toggles.gif)
 

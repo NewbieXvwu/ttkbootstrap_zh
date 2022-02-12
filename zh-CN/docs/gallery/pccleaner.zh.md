@@ -1,18 +1,20 @@
 # 电脑垃圾清理器
 此示例演示如何使用各种样式为电脑垃圾清理器应用程序构建 UI。 这是改编自您可以在[此处](https://images.idgesg.net/images/article/2018/08/cw_win10_utilities_ss_02-100769136-orig.jpg)找到的图像。
 
+<font size=2><s>CCleaner：你叫我？（译者注）</s></font>
+
 ![文件搜索图像示例](../assets/gallery/pc_cleaner.png)
 
 ## 风格总结
 此示例中使用的主题是 **pulse**。
 
-| 项目          | 类             | 配色样式            |
-| ----------- | ------------- | --------------- |
-| 操作按钮        | `Button`      | info            |
-| Progressbar | `Progressbar` | success-striped |
+| 项目                  | 类         | 配色样式 |
+| ---                   | ---           | --- |
+| 操作按钮        | `Button`      | info |
+| 进度条           | `Progressbar` | success-striped |
 
 ## 示例代码
-https://replit.com/@israel-dryer/pc-cleaner#main.py
+[在 repl.it 上实时运行此代码](https://replit.com/@israel-dryer/pc-cleaner#main.py)
 
 ```python
 from pathlib import Path
@@ -239,10 +241,10 @@ class Cleaner(ttk.Frame):
             padding=1,
         )
         junk_card.pack(side=LEFT, fill=BOTH, padx=(5, 10), pady=10)
-
+        
         junk_container = ttk.Frame(junk_card, padding=40)
         junk_container.pack(fill=BOTH, expand=YES)
-
+        
         junk_lbl = ttk.Label(
             master=junk_container, 
             image='junk',
@@ -251,7 +253,7 @@ class Cleaner(ttk.Frame):
             anchor=CENTER,
         )
         junk_lbl.pack(fill=BOTH, padx=20, pady=(40, 0))
-
+        
         ttk.Label(
             master=junk_container, 
             textvariable='junk_lbl',
@@ -267,7 +269,7 @@ class Cleaner(ttk.Frame):
             padding=40
         )
         note_frame.pack(fill=BOTH)
-
+        
         note_msg = ttk.Label(
             master=note_frame, 
             text='We recommend that you better protect your data', 

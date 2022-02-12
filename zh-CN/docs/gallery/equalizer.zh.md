@@ -1,21 +1,22 @@
 # 均衡器
-此示例演示了使用样式来区分scale函数。 现在对代码进行一些评论；因为我希望比例值反映在比例下方的标签中，所以这个应用程序比它真正需要的复杂得多，因为 `Scale` 实现的一些奇怪之处。 `Scale` 小部件输出一个 double 类型，这意味着为了显示一个漂亮的舍入整数，该数字必须在更新时进行转换。 幸运的是，scale 小部件有一个用于设置回调的命令参数。 回调将获取比例值，然后可以将其转换为干净的格式。
+此示例演示了使用样式来区分scale函数。现在对代码进行一些评论；因为我希望比例值反映在比例下方的标签中，所以这个应用程序比它真正需要的复杂得多，因为 `Scale` 实现的一些奇怪之处。 `Scale` 小部件输出一个 double 类型，这意味着为了显示一个漂亮的舍入整数，该数字必须在更新时进行转换。幸运的是，scale 小部件有一个用于设置回调的命令参数。回调将获取比例值，然后可以将其转换为干净的格式。
 
 ![文件搜索图像示例](../assets/gallery/equalizer.png)
 
 ## 风格总结
 使用的主题是**litera**。
 
-| 项目    | 类       | 配色风格    |
-| ----- | ------- | ------- |
-| 音量滑动块 | `Scale` | success |
-| 总滑动块  | `Scale` | success |
-| 其它滑动块 | `Scale` | info    |
+|项目 |类 |配色风格 |
+| --- | --- | --- |
+|音量滑动块 | `Scale` |success|
+|总滑动块 | `Scale` |success|
+|其它滑动块 | `Scale` |info |
 
-!!! !!! note 对于垂直方向，`from_` 参数对应于顶部，而 `to` 对应于小部件的底部，因此在设置缩放范围的最小和最大数字时需要考虑到这一点。
+!!! note
+    对于垂直方向，`from_` 参数对应于顶部，而 `to` 对应于小部件的底部，因此在设置缩放范围的最小和最大数字时需要考虑到这一点。
 
 ## 示例代码
-https://replit.com/@israel-dryer/equalizer#main.py
+[在 repl.it 上实时运行此代码](https://replit.com/@israel-dryer/equalizer#main.py)
 
 ```python
 import ttkbootstrap as ttk
@@ -24,7 +25,7 @@ from random import randint
 
 
 class Equalizer(ttk.Frame):
-
+    
     def __init__(self, master):
         super().__init__(master, padding=20)
         self.pack(fill=BOTH, expand=YES)
