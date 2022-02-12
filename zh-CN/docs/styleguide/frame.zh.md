@@ -1,7 +1,6 @@
 # Frame
 
-This widget style features a default background color that matches the theme
-background by default, or the [selected color](index.md#colors).
+This widget style features a default background color that matches the theme background by default, or the [selected color](index.md#colors).
 
 ![frame](../assets/widget-styles/frame.png)
 
