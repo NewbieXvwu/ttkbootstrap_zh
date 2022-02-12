@@ -1,6 +1,6 @@
 # Scale
 
-This widget style features a thin gray trough with a round slider handle that is **primary** color by default or the [selected color](index.md#colors). The slider handle lightens on _hover_ and darkens when _pressed_.
+This widget style features a thin gray trough with a round slider handle that is **primary** color by default or the [selected color](index.md#colors). The slider handle lightens on _hover_ and darkens when _pressed_. The slider handle lightens on _hover_ and darkens when _pressed_.
 
 This widget supports a special style for [disabled state](#other-scale-styles).
 
