@@ -1,3 +1,3 @@
 # toast module
 
-::: ttkbootstrap.toast selection: filters: ["!^_", "^__init__"] rendering: heading_level: 2
+A semi-transparent popup window for temporary alerts or messages. You may choose to display the toast for a specified period of time, otherwise you must click the toast to close it.
