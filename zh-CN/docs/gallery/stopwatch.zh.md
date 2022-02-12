@@ -1,22 +1,22 @@
-# Stopwatch
-This stopwatch application has the standard start, stop, and reset functions. Different styles are applied to the **Start** and **Pause** button depending on the state of the button.
+# 秒表
+此秒表应用程序具有标准的启动、停止和重置功能。 **Start** 和 **Pause** 按钮会根据按钮的状态应用不同的样式。
 
-![file search image example](../assets/gallery/timer_widget_started.png)
+![文件搜索图像示例](../assets/gallery/timer_widget_started.png)
 
-![file search image example](../assets/gallery/timer_widget_paused.png)
+![文件搜索图像示例](../assets/gallery/timer_widget_paused.png)
 
-## Style Summary
-The theme applied is **cosmo**.
+## 风格总结
+应用的主题是**cosmo**。
 
-| Item  | Class    | Bootstyle    |
-| ----- | -------- | ------------ |
-| Start | `Button` | info         |
-| Pause | `Button` | info-outline |
-| Reset | `Button` | success      |
-| Quit  | `Button` | danger       |
+| 项目 | 类        | 配色样式         |
+| -- | -------- | ------------ |
+| 开始 | `Button` | info         |
+| 暂停 | `Button` | info-outline |
+| 重置 | `Button` | success      |
+| 退出 | `Button` | danger       |
 
-## Example Code
-[Run this code live](https://replit.com/@israel-dryer/stopwatch#main.py) on repl.it
+## 示例代码
+https://replit.com/@israel-dryer/stopwatch#main.py
 
 ```python
 import ttkbootstrap as ttk
@@ -82,6 +82,54 @@ class Stopwatch(ttk.Frame):
 
     def on_toggle(self):
         """Toggle the start and pause button."""
+        button = self.buttons[0]
+        if self.running.get():
+            self.pause()
+            self.running.set(False)
+            button.configure(bootstyle=INFO, text="Start")
+        else:
+            self.start()
+            self.running.set(True)
+            button.configure(bootstyle=(INFO, OUTLINE), text="Pause")
+
+    def on_quit(self):
+        """Quit the application."""
+        self.quit()
+
+    def on_reset(self):
+        """Reset the stopwatch number display."""
+        self.elapsed.set(0)
+        self.stopwatch_text.set("00:00:00")
+
+    def start(self):
+        """Start the stopwatch and update the display."""
+        self.afterid.set(self.after(1, self.increment))
+
+    def pause(self):
+        """Pause the stopwatch"""
+        self.after_cancel(self.afterid.get())
+
+    def increment(self):
+        """Increment the stopwatch value. This method continues to
+        schedule itself every 1 second until stopped or paused."""
+        current = self.elapsed.get() + 1
+        self.elapsed.set(current)
+        formatted = "{:02d}:{:02d}:{:02d}".format(
+            (current // 100) // 60, (current // 100) % 60, (current % 100)
+        )
+        self.stopwatch_text.set(formatted)
+        self.afterid.set(self.after(100, self.increment))
+
+
+if __name__ == "__main__":
+
+    app = ttk.Window(
+        title="Stopwatch", 
+        themename="cosmo", 
+        resizable=(False, False)
+    )
+    Stopwatch(app)
+    app.mainloop()
         button = self.buttons[0]
         if self.running.get():
             self.pause()
