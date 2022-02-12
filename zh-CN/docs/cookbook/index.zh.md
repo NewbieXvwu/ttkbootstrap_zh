@@ -1,6 +1,5 @@
-# 食谱
+# 参考手册
 
-越来越多的食谱展示了如何在 ttkbootstrap 中做特定的事情。
-<br><br>
+正在增加的配方来演示如何在 ttkbootstrap中做特定的事情。 <br><br>
 
 ![食谱](../assets/cookbook/code-cooking.jfif)
