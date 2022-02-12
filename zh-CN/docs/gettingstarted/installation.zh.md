@@ -1,15 +1,15 @@
-# Installation
+# 安装
 
-Easy peezy.
+这是很容易的。
 
-!!! note "PyPI Installation"
+!!! !!! note "通过PyPI安装"
     ```bash
     python -m pip install ttkbootstrap
     ```
 
-Lemon squeeze.
+挤柠檬。
 
-!!! note "Github Installation"
+!!! !!! note "通过Github安装"
     ```bash
     python -m pip install git+https://github.com/israel-dryer/ttkbootstrap
     ```
