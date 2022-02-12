@@ -1,29 +1,28 @@
-# 按钮
+# Button
 
-此小部件具有多种按钮样式类型，它们使用**primary**作为默认颜色，或[选定的颜色](index.md#colors)。
+This widget features a variety of button style types that have a **primary** color by default, or the [selected color](index.md#colors).
 
-此小部件支持[禁用状态](#other-button-styles)的特殊样式。
+This widget supports a special style for [disabled state](#other-button-styles).
 
-## 实心按钮（默认）
+## Solid button (default)
 
-默认样式具有纯色背景，在 _鼠标悬浮_ 和 _按下_ 时变暗。当小部件被聚焦时，按钮内会出现一个虚线环。
+The default style features a solid background that lightens on _hover_ and darkens when _pressed_. A dashed ring appears inside the button when the widget has focus.
 
-![实心按钮](../assets/widget-styles/solid-buttons.gif)
+![solid button](../assets/widget-styles/solid-buttons.gif)
 
 ```python
-# 默认样式
+# default style
 Button()
 
-# success样式
+# success style
 Button(bootstyle="success")
 ```
 
-## 外框按钮
+## Outline button
 
-这种风格的特点是具有纤细的轮廓。当 _鼠标悬浮_ 或 _按下_ 时，
-按钮变为类似于默认按钮样式的纯色。当小部件被聚焦时，按钮内会出现一个虚线环。
+This style features a thin styled outline. When _pressed_ or on _hover_, the button changes to a solid color similar to the default button style. A dashed ring appears inside the button when the widget has focus.
 
-![外框按钮](../assets/widget-styles/outline-buttons.gif)
+![outline buttons](../assets/widget-styles/outline-buttons.gif)
 
 ```python
 # default outline style
@@ -33,11 +32,11 @@ Button(bootstyle="outline")
 Button(bootstyle="success-outline")
 ```
 
-## 链接按钮
+## Link button
 
-此样式具有带有标签外观的按钮。当 _鼠标悬浮_ 或 _按下_ 时，文字颜色改变为**info**以模拟您期望的HTML 超链接效果。按下按钮时会有轻微的虚线框效果。当小部件被聚焦时，它会展现被激活的外观。
+This style features a button with the appearance of a label. The text color changes to **info** on _hover_ or when _pressed_ to simulate the effect you would expect on an HTML hyperlink. There is a slight shift-relief when the button is pressed that gives the appearance of movement. A dashed ring appears inside the button when the widget has focus.
 
-![链接按钮](../assets/widget-styles/link-buttons.gif)
+![link buttons](../assets/widget-styles/link-buttons.gif)
 
 ```python
 # default link style
@@ -47,10 +46,10 @@ Button(bootstyle="link")
 Button(bootstyle="success-link")
 ```
 
-## 其他按钮样式
+## Other button styles
 
-#### 禁用按钮
-这种风格 _不能通过关键字应用_；它是通过小部件配置的设置。
+#### Disabled button
+This style _cannot be applied via keywords_; it is configured through widget settings.
 
 ```python
 # create the button in a disabled state
