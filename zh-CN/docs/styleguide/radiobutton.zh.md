@@ -6,7 +6,7 @@ This widget supports a special style for [disabled state](#other-radiobutton-sty
 
 ## Radio (default)
 
-The default widget style features the traditional **radiobutton** which has a round indicator. The indicator is filled with the default or selected color when in a _selected state_.
+The default widget style features the traditional **radiobutton** which has a round indicator. The indicator is filled with the default or selected color when in a _selected state_. The indicator is filled with the default or selected color when in a _selected state_.
 
 ![radiobutton](../assets/widget-styles/radiobuttons.png)
 
