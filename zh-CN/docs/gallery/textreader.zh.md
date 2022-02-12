@@ -1,18 +1,18 @@
-# Text Reader
-This application opens a text file and puts the data into a scrolled `Text` widget.
+# 文本阅读器
+此应用程序打开一个文本文件并将数据放入滚动的`文本`小部件中。
 
-![file search image example](../assets/gallery/text_reader.png)
+![文件搜索图像示例](../assets/gallery/text_reader.png)
 
-## Style Summary
-The theme applied is **sandstone**.
+## 风格总结
+应用的主题是**sandstone**。
 
-| Item         | Class    | Bootstyle |
-| ------------ | -------- | --------- |
-| file entry   | `Entry`  | default   |
-| Browe button | `Button` | default   |
+| 项目     | 类        | 配色样式    |
+| ------ | -------- | ------- |
+| 文件文本框  | `Entry`  | default |
+| 选择文件按钮 | `Button` | default |
 
-## Example Code
-[Run this code live](https://replit.com/@israel-dryer/text-reader#main.py) on repl.it
+## 示例代码
+https://replit.com/@israel-dryer/text-reader#main.py
 
 ```python
 import ttkbootstrap as ttk
@@ -40,6 +40,30 @@ class TextReader(ttk.Frame):
         )
         self.textbox.pack(fill=BOTH)
         default_txt = "Click the browse button to open a new text file."
+        self.textbox.insert(END, default_txt)
+
+        file_entry = ttk.Entry(self, textvariable=self.filename)
+        file_entry.pack(side=LEFT, fill=X, expand=YES, padx=(0, 5), pady=10)
+
+        browse_btn = ttk.Button(self, text="Browse", command=self.open_file)
+        browse_btn.pack(side=RIGHT, fill=X, padx=(5, 0), pady=10)
+
+    def open_file(self):
+        path = askopenfilename()
+        if not path:
+            return
+
+        with open(path, encoding='utf-8') as f:
+            self.textbox.delete('1.0', END)
+            self.textbox.insert(END, f.read())
+            self.filename.set(path)
+
+
+if __name__ == '__main__':
+
+    app = ttk.Window("Text Reader", "sandstone")
+    TextReader(app)
+    app.mainloop()
         self.textbox.insert(END, default_txt)
 
         file_entry = ttk.Entry(self, textvariable=self.filename)
