@@ -1,19 +1,19 @@
-# 计算器
-这个基本的计算器 UI 演示了如何使用不同的颜色来区分按钮功能。
+# Calculator
+This basic calculator UI demonstrates how to use different colors to differentiate button functions.
 
-![文件搜索图像示例](../assets/gallery/calculator.png)
+![file search image example](../assets/gallery/calculator.png)
 
-## 风格总结
-此示例中使用的主题是 **flatly**。
+## Style Summary
+The theme used in this example is **flatly**.
 
-|项目 |类 |配色风格 |
-| --- | --- |--- |
-|数字 | `按钮` |primary |
-|运算符 | `按钮` |secondary |
-|等于 | `按钮` |success|
+| Item      | Class    | Bootstyle |
+| --------- | -------- | --------- |
+| Digits    | `Button` | primary   |
+| Operators | `Button` | secondary |
+| Equals    | `Button` | success   |
 
-## 示例代码
-[在 repl.it 上实时运行此代码](https://replit.com/@israel-dryer/calculator#main.py)
+## Example Code
+[Run this code live](https://replit.com/@israel-dryer/calculator#main.py) on repl.it
 
 ```python
 import ttkbootstrap as ttk
