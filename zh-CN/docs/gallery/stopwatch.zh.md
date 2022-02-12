@@ -1,22 +1,22 @@
-# 秒表
-此秒表应用程序具有标准的启动、停止和重置功能。 **Start** 和 **Pause** 按钮会根据按钮的状态应用不同的样式。
+# Stopwatch
+This stopwatch application has the standard start, stop, and reset functions. Different styles are applied to the **Start** and **Pause** button depending on the state of the button.
 
-![文件搜索图像示例](../assets/gallery/timer_widget_started.png)
+![file search image example](../assets/gallery/timer_widget_started.png)
 
-![文件搜索图像示例](../assets/gallery/timer_widget_paused.png)
+![file search image example](../assets/gallery/timer_widget_paused.png)
 
-## 风格总结
-应用的主题是**cosmo**。
+## Style Summary
+The theme applied is **cosmo**.
 
-| 项目      | 类     | 配色样式 |
-| ---       | ---       | --- |
-| 开始     | `Button`  | info |
-| 暂停     | `Button`  | info-outline |
-| 重置     | `Button`  | success |
-| 退出      | `Button`  | danger |
+| Item  | Class    | Bootstyle    |
+| ----- | -------- | ------------ |
+| Start | `Button` | info         |
+| Pause | `Button` | info-outline |
+| Reset | `Button` | success      |
+| Quit  | `Button` | danger       |
 
-## 示例代码
-[在 repl.it 上实时运行此代码](https://replit.com/@israel-dryer/stopwatch#main.py)
+## Example Code
+[Run this code live](https://replit.com/@israel-dryer/stopwatch#main.py) on repl.it
 
 ```python
 import ttkbootstrap as ttk
