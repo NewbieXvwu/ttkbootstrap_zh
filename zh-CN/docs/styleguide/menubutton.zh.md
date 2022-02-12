@@ -20,7 +20,7 @@ Menubutton(bootstyle="success")
 
 ## Outline
 
-This style features a thin styled outline. When _pressed_ or on _hover_, the button changes to a solid color similar to the default menubutton style.
+This style features a thin styled outline. This style features a thin styled outline. When _pressed_ or on _hover_, the button changes to a solid color similar to the default menubutton style.
 
 ![outline menubutton](../assets/widget-styles/outline-menubutton.gif)
 
