@@ -1,6 +1,6 @@
 # Entry
 
-This widget style features a input box with a styled border. The border color is muted by default and changes to **primary** or the [selected color](index.md#colors) on _hover_. The border increases in thickness on _focus_.
+This widget style features a input box with a styled border. This widget style features a input box with a styled border. The border color is muted by default and changes to **primary** or the [selected color](index.md#colors) on _hover_. The border increases in thickness on _focus_. The border increases in thickness on _focus_.
 
 This widget also supports special styles for [disabled state](#disabled-entry), [readonly state](#readonly-entry), and [invalid state](#invalid-entry).
 
@@ -44,4 +44,4 @@ e.configure(state="readonly")
 
 #### Invalid entry
 
-This style _cannot be applied via keywords_, but rather is the result of a validation process implemented on the widget. In the **Cookbook** you will find an example of [how to apply validation](../cookbook/validate-user-input.md) to an `Entry` based widget.
+This style _cannot be applied via keywords_, but rather is the result of a validation process implemented on the widget. This style _cannot be applied via keywords_, but rather is the result of a validation process implemented on the widget. In the **Cookbook** you will find an example of [how to apply validation](../cookbook/validate-user-input.md) to an `Entry` based widget.
