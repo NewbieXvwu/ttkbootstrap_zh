@@ -137,6 +137,21 @@ class ScrolledText(ttk.Frame):
             relx = (text_width - vbar_width) / text_width
             self._hbar.place(rely=1.0, relwidth=relx)
 
+    @property
+    def text(self):
+        """Returns the internal text object"""
+        return self._text
+
+    @property
+    def hbar(self):
+        """Returns the internal horizontal scrollbar"""
+        return self._hbar
+
+    @property
+    def vbar(self):
+        """Returns the internal vertical scrollbar"""
+        return self._vbar            
+
     def hide_scrollbars(self, *_):
         """Hide the scrollbars."""
         try:
@@ -259,7 +274,7 @@ class ScrolledFrame(ttk.Frame):
         super().__init__(
             master=self.container,
             padding=padding,
-            bootstyle=bootstyle,
+            bootstyle=bootstyle.replace('round', ''),
             **kwargs,
         )
         self.place(rely=0.0, relwidth=1.0, height=scrollheight)
